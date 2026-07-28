@@ -9,5 +9,12 @@ pipeline {
                        find . -maxdepth 2 -type f '''
             }
         }
+        stage('verify docker'){
+            steps{
+                sh ''' 
+                    docker --version
+                    docker info'''
+            }
+        }
     }
 }
