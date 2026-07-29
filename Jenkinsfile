@@ -46,5 +46,11 @@ pipeline {
                        docker image ls  '''
             }
         }
+        stage ('we are runnig k8s'){
+            steps{
+                sh ''' kubectl apply -f k8s-specifications\ '''
+            }
+
+        }
     }
 }
