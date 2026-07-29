@@ -33,7 +33,8 @@ pipeline {
             steps{
                 sh ''' cd worker
                        docker build -t worker:v1 .
-                       docker image ls '''
+                       docker image ls 
+                       cd .. '''
                                                    
 
             }
