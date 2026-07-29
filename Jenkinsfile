@@ -43,12 +43,13 @@ pipeline {
             steps{
                 sh ''' cd result 
                        docker build -t result:v1 .
-                       docker image ls  '''
+                       docker image ls 
+                       cd .. '''
             }
         }
         stage ('we are runnig k8s'){
-            steps{
-                sh ''' kubectl apply -f k8s-specifications/deployment.yml
+            steps{/
+                sh ''' kubectl apply -f k8s-specifications/
                        kubectl get deployment'''
             }
 
