@@ -22,7 +22,8 @@ pipeline {
                 sh ''' cd vote
                     docker build -t vote:v1 .
                     cd .. 
-                    echo "we are now triggerr enabled" '''
+                    echo "we are now triggerr enabled" 
+                    echo " now this is second time" '''
             }
                     
 
