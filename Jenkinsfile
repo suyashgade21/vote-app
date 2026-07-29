@@ -48,9 +48,9 @@ pipeline {
             }
         }
         stage ('we are runnig k8s'){
-            steps{/
+            steps{
                 sh ''' kubectl apply -f k8s-specifications/
-                       kubectl get deployment'''
+                       kubectl get deployment '''
             }
 
         }
