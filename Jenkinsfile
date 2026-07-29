@@ -29,5 +29,20 @@ pipeline {
 
 
         }
+        stage('we are building now worker application image'){
+            steps{
+                sh ''' cd worker
+                       docker build -t worker:v1 .
+                       docker image ls '''
+                                                   
+
+            }
+        }stage('we are now builiding for result:v1 '){
+            steps{
+                sh ''' cd result 
+                       docker build -t result:v1 .
+                       docker image ls  '''
+            }
+        }
     }
 }
