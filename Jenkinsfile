@@ -16,5 +16,12 @@ pipeline {
                     docker info'''
             }
         }
+        stage(' create run first docker image'){
+
+            sh ''' cd vote
+                    docker build -t vote:v1 .
+                    cd .. '''
+                    
+        }
     }
 }
