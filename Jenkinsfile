@@ -21,9 +21,12 @@ pipeline {
             steps{
                 sh ''' cd vote
                     docker build -t vote:v1 .
-                    cd .. '''
+                    cd .. 
+                    echo "we are now triggerr enabled" '''
             }
                     
+
+
         }
     }
 }
