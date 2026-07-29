@@ -38,7 +38,8 @@ pipeline {
                                                    
 
             }
-        }stage('we are now builiding for result:v1 '){
+        }
+        stage('we are now builiding for result:v1 '){
             steps{
                 sh ''' cd result 
                        docker build -t result:v1 .
